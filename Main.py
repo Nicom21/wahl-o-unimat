@@ -17,7 +17,7 @@ def main():
             elif i == 2:
                 spezifisch()
             else:
-                i = int("falsche Einfabe")
+                i = int("falsche Eingabe")
             break
         except ValueError:
                 print("Das war keine gültige Eingabe. Bitte versuche es erneut.")
