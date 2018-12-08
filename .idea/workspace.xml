@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c378aff-740d-4965-80cb-2b0127f93b49" name="Default Changelist" comment="Version 2.0&#10;Zufallsmodus: -funktioniert soweit&#10;              -der wahltext wird noch in einer sehr langen Zeile ausgegeben und nicht kompakt dagestellt (evtl. nicht nötig)&#10;              -die Variable &quot;Zweitkandidatur&quot; wird (noch) nicht verwendet&#10;              -Studienfach wird nur abgeküzt ausgegeben (in Vorgabe ausgeschrieben)&#10;&#10;Spezifischer Modus: -die Abfrage der Suchkriterien funktioniert soweit&#10;                    -Die Überpüfung, ob zu viele Fachsemester eingeben wurde kann theoretisch weggelassen werden&#10;                    -Der Vergleich mit der Liste fehlt noch&#10;                    -Die Ausgabe der Kandidaten fehlt noch">
+    <list default="true" id="4c378aff-740d-4965-80cb-2b0127f93b49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
@@ -15,13 +15,13 @@
     <session id="893609774">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.45" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -44,8 +44,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="352" />
-          <entry key="Python" value="8528" />
+          <entry key="PLAIN_TEXT" value="366" />
+          <entry key="Python" value="8841" />
         </counts>
       </usages-collector>
     </session>
@@ -55,15 +55,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="172" column="108" selection-start-line="172" selection-start-column="108" selection-end-line="172" selection-end-column="108" />
+            <state relative-caret-position="170">
+              <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
               <folding>
                 <element signature="e#195#1112#0" />
                 <element signature="e#493#1112#0" />
-                <element signature="e#1133#2450#0" />
-                <element signature="e#7773#8292#0" />
-                <element signature="e#8423#8780#0" />
-                <element signature="e#9341#9903#0" />
+                <element signature="e#1133#2852#0" />
+                <element signature="e#2878#9323#0" />
+                <element signature="e#3267#4445#0" />
+                <element signature="e#4507#5059#0" />
+                <element signature="e#5119#8143#0" />
+                <element signature="e#9342#9902#0" />
               </folding>
             </state>
           </provider>
@@ -181,12 +183,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544118873533</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Version 2.0&#10;Zufallsmodus: -funktioniert&#10;              -der wahltext wird noch in einer sehr langen Zeile ausgegeben und nicht kompakt dagestellt (evtl. nicht nötig)&#10;              -Studienfach wird nur abgeküzt ausgegeben (in Vorgabe ausgeschrieben)&#10;&#10;Spezifischer Modus: -funktioniert">
+      <created>1544265633732</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544265633733</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -213,7 +221,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- erstes Grundgerüst&#10;- Wahl des Modus mit Eingabeüberprüfung" />
     <MESSAGE value="Version 2.0&#10;Zufallsmodus: -funktioniert soweit&#10;              -der wahltext wird noch in einer sehr langen Zeile ausgegeben und nicht kompakt dagestellt (evtl. nicht nötig)&#10;              -die Variable &quot;Zweitkandidatur&quot; wird (noch) nicht verwendet&#10;              -Studienfach wird nur abgeküzt ausgegeben (in Vorgabe ausgeschrieben)&#10;&#10;Spezifischer Modus: -die Abfrage der Suchkriterien funktioniert soweit&#10;                    -Die Überpüfung, ob zu viele Fachsemester eingeben wurde kann theoretisch weggelassen werden&#10;                    -Der Vergleich mit der Liste fehlt noch&#10;                    -Die Ausgabe der Kandidaten fehlt noch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 2.0&#10;Zufallsmodus: -funktioniert soweit&#10;              -der wahltext wird noch in einer sehr langen Zeile ausgegeben und nicht kompakt dagestellt (evtl. nicht nötig)&#10;              -die Variable &quot;Zweitkandidatur&quot; wird (noch) nicht verwendet&#10;              -Studienfach wird nur abgeküzt ausgegeben (in Vorgabe ausgeschrieben)&#10;&#10;Spezifischer Modus: -die Abfrage der Suchkriterien funktioniert soweit&#10;                    -Die Überpüfung, ob zu viele Fachsemester eingeben wurde kann theoretisch weggelassen werden&#10;                    -Der Vergleich mit der Liste fehlt noch&#10;                    -Die Ausgabe der Kandidaten fehlt noch" />
+    <MESSAGE value="Version 3.0&#10;Zufallsmodus: -funktioniert&#10;              -der wahltext wird noch in einer sehr langen Zeile ausgegeben und nicht kompakt dagestellt (evtl. nicht nötig)&#10;              -Studienfach wird nur abgeküzt ausgegeben (in Vorgabe ausgeschrieben)&#10;&#10;Spezifischer Modus: -funktioniert" />
+    <MESSAGE value="Version 2.0&#10;Zufallsmodus: -funktioniert&#10;              -der wahltext wird noch in einer sehr langen Zeile ausgegeben und nicht kompakt dagestellt (evtl. nicht nötig)&#10;              -Studienfach wird nur abgeküzt ausgegeben (in Vorgabe ausgeschrieben)&#10;&#10;Spezifischer Modus: -funktioniert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 2.0&#10;Zufallsmodus: -funktioniert&#10;              -der wahltext wird noch in einer sehr langen Zeile ausgegeben und nicht kompakt dagestellt (evtl. nicht nötig)&#10;              -Studienfach wird nur abgeküzt ausgegeben (in Vorgabe ausgeschrieben)&#10;&#10;Spezifischer Modus: -funktioniert" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../../Tasks/12 greek geek exteded/greek geek extended.py">
@@ -232,15 +242,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="172" column="108" selection-start-line="172" selection-start-column="108" selection-end-line="172" selection-end-column="108" />
+        <state relative-caret-position="170">
+          <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
           <folding>
             <element signature="e#195#1112#0" />
             <element signature="e#493#1112#0" />
-            <element signature="e#1133#2450#0" />
-            <element signature="e#7773#8292#0" />
-            <element signature="e#8423#8780#0" />
-            <element signature="e#9341#9903#0" />
+            <element signature="e#1133#2852#0" />
+            <element signature="e#2878#9323#0" />
+            <element signature="e#3267#4445#0" />
+            <element signature="e#4507#5059#0" />
+            <element signature="e#5119#8143#0" />
+            <element signature="e#9342#9902#0" />
           </folding>
         </state>
       </provider>

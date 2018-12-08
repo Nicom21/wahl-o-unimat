@@ -93,7 +93,7 @@ def spezifisch():
     #   Abfrage des Studienganges
     while True:
         try:
-            auswahl = str(input("Ist dir der Studiengang wichtig? [Ja/Nein]\n"));
+            auswahl = str(input("Ist dir der Studiengang wichtig? [Ja/Nein]\n"))
             if auswahl in {"ja", "Ja", "JA"}:
 
                 #   spezifische Frage nach dem Studiengang
@@ -156,6 +156,8 @@ def spezifisch():
                             #   schon bereits angegeben wurde.
                             if eingabe > 11 or eingabe < 1:
                                 fachsemesteranzahl[count] = int("Fehler")
+
+                            #   parsen auf String um mit dem Listenelement zu vergleichen
                             str(eingabe)
                             if eingabe in fachsemesteranzahl:
                                 fachsemesteranzahl[count] = int("Fehler")
@@ -192,23 +194,21 @@ def spezifisch():
         except ValueError:
                 print("Das war keine gültige Eingabe. Bitte versuche es erneut.")
 
+    #   Erstellung einer Liste der möglichen Kandidaten
     moeglicherKandidat = []
 
     count = 1
-    #   moeglicherKandidat.append(19)
+
+    #   Vergleichen der Suchparameter mit den möglichen Kandidaten
     while count < 20:
         if studiengang == studienfach[count] or studiengang == "irrelevant":
-            #print("test studienfach")
             if neuling == zweitkandidatur[count] or neuling == "1":
-                #print("test neuling")
-                #print(fachsemester[count])
-                #print(fachsemesteranzahl)
                 if fachsemester[count] in fachsemesteranzahl or fachsemesteranzahl[0] == "irrelevant":
-                    #print("test fachsemester")
                     moeglicherKandidat.append(count)
         count += 1
     count = 0
 
+    #   Ausgabe aller möglichen Kandidaten
     while count < len(moeglicherKandidat):
         print(">> ", vorname[moeglicherKandidat[count]], " ", name[moeglicherKandidat[count]])
         print(studienfach[moeglicherKandidat[count]])
@@ -217,6 +217,7 @@ def spezifisch():
         print(kandierungsfaktor[moeglicherKandidat[count]], "\n")
         count += 1
 
+    #   wird ausgegeben, falls die Kriterien zu keinen Kandidaten passen
     if len(moeglicherKandidat) == 0:
         print("Für dich konnte leider kein geeigneter Kandidat gefunden werden")
 
