@@ -52,18 +52,30 @@ def zufall():
     print(studienfach[RandomKandidat1])
     print(fachsemester[RandomKandidat1], ". Fachsemester\n")
     print(wahltext[RandomKandidat1], "\n")
+    if zweitkandidatur[RandomKandidat1] == "0":
+        print("Zweitkandidatur: Nein")
+    else:
+        print("Zweitkandidatur: Ja")
     print(kandierungsfaktor[RandomKandidat1], "\n")
 
     print(">> ", vorname[RandomKandidat2], " ", name[RandomKandidat2])
     print(studienfach[RandomKandidat2])
     print(fachsemester[RandomKandidat2], ". Fachsemester\n")
     print(wahltext[RandomKandidat2], "\n")
+    if zweitkandidatur[RandomKandidat2] == "0":
+        print("Zweitkandidatur: Nein")
+    else:
+        print("Zweitkandidatur: Ja")
     print(kandierungsfaktor[RandomKandidat2], "\n")
 
     print(">> ", vorname[RandomKandidat3], " ", name[RandomKandidat3])
     print(studienfach[RandomKandidat3])
     print(fachsemester[RandomKandidat3], ". Fachsemester\n")
     print(wahltext[RandomKandidat3], "\n")
+    if zweitkandidatur[RandomKandidat3] == "0":
+        print("Zweitkandidatur: Nein")
+    else:
+        print("Zweitkandidatur: Ja")
     print(kandierungsfaktor[RandomKandidat3], "\n")
 
 
@@ -81,24 +93,24 @@ def spezifisch():
     #   Abfrage des Studienganges
     while True:
         try:
-            auswahl = str(input("Ist dir der Studiengang wichtig?\n"));
-            if auswahl == "ja":
+            auswahl = str(input("Ist dir der Studiengang wichtig? [Ja/Nein]\n"));
+            if auswahl in {"ja", "Ja", "JA"}:
 
                 #   spezifische Frage nach dem Studiengang
                 while True:
                     try:
-                        studiengang = str(input("Studiengang [Inf, MInf, Dipl, MaInf, MaMInf]\n"))
+                        studiengang = str(input("> Studiengang [Ba Inf, Ba MInf, Di Inf, Ma Inf, Ma MInf]\n"))
 
                         #   bei gültiger Eingabe: Beenden der Schleife, bei ungültiger Eingabe: Erzeugen eines Fehlers
                         #   --> erneuter Durchlauf
-                        if studiengang not in {"Inf", "MInf", "Dipl", "MaInf", "MaMInf"}:
+                        if studiengang not in {"Ba Inf", "Ba MInf", "Di Inf", "Ma Inf", "Ma MInf"}:
                             studiengang = int("Fehler")
                         break
                     except ValueError:
                         print("Das war keine gültige Eingabe. Bitte versuche es erneut.\n")
 
             #   bei "nein": Beenden der Schleife, bei !"nein": Erzeugen eines Fehler --> erneuter Durchlauf
-            elif auswahl != "nein":
+            elif auswahl not in {"nein", "Nein", "NEIN"}:
                 auswahl = int("Fehler")
             break
         except ValueError:
@@ -107,13 +119,15 @@ def spezifisch():
     #   Abfrage der Zweitkandidatur
     while True:
         try:
-            auswahl = str(input("Ist dir wichtig, dass es ein Neuling ist?\n"));
-            if auswahl == "ja":
-                neuling = auswahl
+            auswahl = str(input("Ist dir wichtig, dass es ein Neuling ist? [Ja/Nein]\n"))
+            if auswahl in {"ja", "Ja", "JA"}:
+                neuling = "0"
 
             #   bei "nein": Beenden der Schleife, bei !"nein": Erzeugen eines Fehler --> erneuter Durchlauf
-            elif auswahl != "nein":
+            elif auswahl not in {"nein", "Nein", "NEIN"}:
                 auswahl = int("Fehler")
+            else:
+                neuling = "1"
             break
         except ValueError:
                 print("Das war keine gültige Eingabe. Bitte versuche es erneut.")
@@ -121,12 +135,12 @@ def spezifisch():
     #   Abfrage des Fachsemesters
     while True:
         try:
-            auswahl = str(input("Ist dir das Fachsemester wichtig?\n"));
-            if auswahl == "ja":
+            auswahl = str(input("Ist dir das Fachsemester wichtig? [Ja/Nein]\n"))
+            if auswahl in {"ja", "Ja", "JA"}:
                 fachsemesteranzahl.remove("irrelevant")
 
                 #   Schleife für weitere Fachsemestereingaben
-                while auswahl == "ja":
+                while auswahl in {"ja", "Ja", "JA"}:
                     count += 1
                     fachsemesteranzahl.append(0)
 
@@ -136,14 +150,15 @@ def spezifisch():
 
                             #   'eingabe' dient als Zwischenspeicher der Eingabe damit keine Fachsemester doppelt
                             #   eingegeben werden
-                            eingabe = int(input("Fachsemester\n"))
+                            eingabe = int(input("> Fachsemester\n"))
 
                             #   es wird geschaut, ob eingabe nicht zu groß oder klein ist oder ob dieses Fachsemester
                             #   schon bereits angegeben wurde.
                             if eingabe > 11 or eingabe < 1:
                                 fachsemesteranzahl[count] = int("Fehler")
+                            str(eingabe)
                             if eingabe in fachsemesteranzahl:
-                                    fachsemesteranzahl[count] = int("Fehler")
+                                fachsemesteranzahl[count] = int("Fehler")
                             fachsemesteranzahl[count] = eingabe
                             break
                         except ValueError:
@@ -155,11 +170,11 @@ def spezifisch():
 
                             #   Abfrage, ob weitere Fachsemester eingegeben werden möchten, Abbruch,
                             #   falls keine weiteren Fachsemester zur Verfügung stehen
-                            auswahl = str(input("Möchtest du weitere Fachsemester angeben?\n"))
+                            auswahl = str(input("Soll ein weiteres Fachsemester einbezogen werden? [Ja/Nein]\n"))
 
                             #   bei gültiger Eingabe: Beenden der Schleife, bei ungültiger Eingabe:
                             #   Erzeugen eines Fehlers --> erneuter Durchlauf
-                            if auswahl not in {"ja", "nein"}:
+                            if auswahl not in {"ja", "Ja", "JA", "nein", "Nein", "NEIN"}:
                                 auswahl = int("Fehler")
                             break
                         except ValueError:
@@ -171,17 +186,39 @@ def spezifisch():
                         break
 
             #   bei "nein": Beenden der Schleife, bei !"nein": Erzeugen eines Fehler --> erneuter Durchlauf
-            elif auswahl != "nein":
+            elif auswahl not in {"nein", "Nein", "NEIN"}:
                 auswahl = int("Fehler")
             break
         except ValueError:
                 print("Das war keine gültige Eingabe. Bitte versuche es erneut.")
 
-    #   hier werden die Suchkriterien ausgegeben. Später muss hier der Vergleich mit den Kandidaten folgen
-    print("\nSuchparameter:")
-    print("Studiengang: ", studiengang)
-    print("Zweitkandidatur: ", neuling)
-    print("Fachsemester: ", fachsemesteranzahl, "\n")
+    moeglicherKandidat = []
+
+    count = 1
+    #   moeglicherKandidat.append(19)
+    while count < 20:
+        if studiengang == studienfach[count] or studiengang == "irrelevant":
+            #print("test studienfach")
+            if neuling == zweitkandidatur[count] or neuling == "1":
+                #print("test neuling")
+                #print(fachsemester[count])
+                #print(fachsemesteranzahl)
+                if fachsemester[count] in fachsemesteranzahl or fachsemesteranzahl[0] == "irrelevant":
+                    #print("test fachsemester")
+                    moeglicherKandidat.append(count)
+        count += 1
+    count = 0
+
+    while count < len(moeglicherKandidat):
+        print(">> ", vorname[moeglicherKandidat[count]], " ", name[moeglicherKandidat[count]])
+        print(studienfach[moeglicherKandidat[count]])
+        print(fachsemester[moeglicherKandidat[count]], ". Fachsemester\n")
+        print(wahltext[moeglicherKandidat[count]], "\n")
+        print(kandierungsfaktor[moeglicherKandidat[count]], "\n")
+        count += 1
+
+    if len(moeglicherKandidat) == 0:
+        print("Für dich konnte leider kein geeigneter Kandidat gefunden werden")
 
 
 def main():
@@ -202,6 +239,5 @@ def main():
             break
         except ValueError:
                 print("Das war keine gültige Eingabe. Bitte versuche es erneut.\n")
-
 
 main()
